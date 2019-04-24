@@ -1,0 +1,37 @@
+3.	Runway Reservation System is an application that handles reservation of landing slot request
+    for a single runway airport. The system has the following features:
+
+    •	Reserve request that specifies landing time t.
+    •	Add t to a set of landing request R, if no other landings are schedule within 3 minutes.
+    •	Remove from set:
+        o	Landed plane.
+        o	Diverted plane with existing request.
+        o	Canceled flight with existing landing reservation.
+    •	Search next landing request, given the current request time.
+    •	Print out landing request list.
+
+The following are the sequence of request (Initial set R is empty.
+Assuming the time is monotonically increasing and the list is updated every t = 20):
+Reference time t(now): 20
+Request(60)
+Request(67)
+Request(41)
+Request(64)
+Request(33)
+Request(50)
+Request(42)
+Request(70)
+Request(37)
+Request(88)
+Request(68)
+Request(88)
+Request(45)
+Cancel(42)
+Cancel(64)
+Divert(70)
+
+Reference time t(now): 40 (Assuming all requests
+before this time has landed)
+Print(R)
+The application will give the appropriate message for each operation.
+Implement this program using binary search trees.

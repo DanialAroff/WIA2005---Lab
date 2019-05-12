@@ -12,6 +12,7 @@
 
 The following are the sequence of request (Initial set R is empty.
 Assuming the time is monotonically increasing and the list is updated every t = 20):
+
 Reference time t(now): 20
 Request(60)
 Request(67)

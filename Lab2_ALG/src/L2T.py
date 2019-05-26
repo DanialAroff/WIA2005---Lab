@@ -10,11 +10,11 @@ tree.insert(12)
 tree.insert(5)
 tree.insert(9)
 tree.insert(10)
-tree.inorder(tree.get_root())
+tree.inorder()
 print('Deleting node 5\n')
 tree.delete(1)
 print('Root is ' + str(tree.get_root().data))
-tree.inorder(tree.get_root())
+tree.inorder()
 # print('Minimum value in the Tree: ' + str(tree.min_value_node()))
 
 

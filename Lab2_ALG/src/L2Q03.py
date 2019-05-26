@@ -1,37 +1,25 @@
 # Runway Reservation System
-
-
-def sortArray(A):
-    for i in range(0, len(A)):
-        for j in range(1, len(A)-1):
-            if A[i-1] > A[i]:
-                A[i-1], A[i] = A[i], A[i-1]
-    return A
-
+import time
+from BinarySearchTree import BST
 
 R = [None]  # set of landing request
-i = 0
+t = 0
+tree = BST()
+
 print('Runway Reservation System\n')
 while True:
-    n_request = int(input('Enter number of request: '))
-    R = [None]*n_request
-    print()
-    for i in range(0, n_request):
-        R[i] = input('Landing time for request ' + str(i+1) + ': ')
-    R = sortArray(R)
-    print(R)
+    tw = int(input('Input landing time request: '))
+    if tw < 0:
+        break
+    else:
+        if R[0] is not None:
+            R.append(tw)
+        else:
+            R[0] = tw
+print(R)
 
-
-rt = Node(20)
-rt.insert(rt, Node(3))
-rt.insert(rt, Node(12))
-rt.insert(rt, Node(5))
-rt.insert(rt, Node(9))
-rt.insert(rt, Node(10))
-
-print('In-order traversal')
-rt.inorder(rt)
-rt.deleteNode(rt, 10)
-print('\n')
-rt.inorder(rt)
-
+# while True:
+#     if tree.search(t):
+#         print('Reference time t(now): ' + str(t))
+#     t = t + 1
+#     time.sleep(0.5)

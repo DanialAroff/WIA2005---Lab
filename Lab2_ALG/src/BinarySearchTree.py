@@ -75,9 +75,13 @@ class BST:
                     # the left child of rightmost node
                     parent_temp.right = temp.left
 
-    def inorder(self, root):
+    def inorder(self):
+        """a function which mainly calls the inorderRec function"""
+        self.inorderRec(self.root)
+
+    def inorderRec(self, root):
         """print the content with in-order traversal"""
         if root:
-            self.inorder(root.left)
+            self.inorderRec(root.left)
             print(root.data)
-            self.inorder(root.right)
+            self.inorderRec(root.right)

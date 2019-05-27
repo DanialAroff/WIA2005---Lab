@@ -1,21 +1,6 @@
-import time
-from geopy import distance
-from geopy.geocoders import Nominatim
-from distancebetween import MyDistanceCalculator
-# 3.832795, 103.308332 -- my house
 
-print(time.strftime('%Y/%m/%d %I:%M:%S  %A'))
-geolocator = Nominatim(user_agent='WIA2005_Assignment')
-
-d = MyDistanceCalculator()
-location1 = 'Moscow'
-location2 = 'New York City'
-
-print('Distance: ' + str(d.distance(location1, location2)) + 'km\n')
-
-print(d.get_addr(location1))
-print(d.get_addr(location2))
-
+# unused code for Q2
+#
 # shanghai = geolocator.geocode('Shanghai', timeout=20, language='en')
 # dhaka = geolocator.geocode('Dhaka', timeout=20, language='en')
 #
@@ -29,3 +14,5 @@ print(d.get_addr(location2))
 #     longitude = location.longitude
 # print('\n' + str(location))
 # print('\nCoordinate: ' + str(latitude) + ', ' + str(longitude))
+
+# 3.832795, 103.308332 -- my house

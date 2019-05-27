@@ -15,7 +15,7 @@ def getfrequency(mylist, myword):
 
 
 h = hashtable.HashTable()
-f = open('inputtt.txt', 'r')
+f = open('input.txt', 'r')
 # create a list of every words of the txt file
 mylist = f.read().split()
 for i in range(len(mylist)):
